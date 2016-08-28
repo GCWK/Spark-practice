@@ -21,6 +21,7 @@ Please note:
   - [Set Operation](#set-operation)
   - [Join](#join)
 - [4. Submitting Application](#4-submitting-application)
+- [5. Set Up A Standalone Cluster](#5-set-up-a-standalone-cluster)
 - [References](#references)
 - [License](#license)
 
@@ -378,6 +379,7 @@ The `spark-submit` script in Spark’s `bin` directory is just used to figure ou
 While using `spark-submit`, there are also several options we can specify, including which cluster to use (`--master`) and arbitrary Spark configuration property. For details and examples of this, you may refere to *Submitting Applications*[2].
 
 
+## 5. Set Up A Standalone Cluster
 
 
 ## References
