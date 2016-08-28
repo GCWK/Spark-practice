@@ -381,6 +381,12 @@ While using `spark-submit`, there are also several options we can specify, inclu
 
 ## 5. Set Up A Standalone Cluster
 
+Install Spark on each node
+
+Set password-free access between nodes, with `ssh-genkey` and `ssh-copy-id`.
+
+How to increase SWAP space on raspberry should the memory is not enough.
+
 
 ## References
 [1] Spark Programming Guide, http://spark.apache.org/docs/latest/programming-guide.html
