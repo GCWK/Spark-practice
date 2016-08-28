@@ -385,8 +385,22 @@ Install Spark on each node
 
 Set password-free access between nodes, with `ssh-genkey` and `ssh-copy-id`.
 
-How to increase SWAP space on raspberry should the memory is not enough.
+### How to Increase SWAP Space Should the Memory Is Not Enough (on Raspberry)
 
+(http://raspberrypi.stackexchange.com/questions/70/how-to-set-up-swap-space)
+
+Raspbian uses `dphys-swapfile`, which is a swap-file based solution instead of the "standard" swap-partition based solution. It is much easier to change the size of the swap.
+
+The configuration file is `/etc/dphys-swapfile`. The content is very simple. By default my Raspbian has 100MB of swap:
+```
+CONF_SWAPSIZE=100
+```
+
+If you want to change the size, you need to modify the number and restart dphys-swapfile:
+```
+/etc/init.d/dphys-swapfile stop
+/etc/init.d/dphys-swapfile start
+```
 
 ## References
 [1] Spark Programming Guide, http://spark.apache.org/docs/latest/programming-guide.html
