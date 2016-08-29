@@ -416,6 +416,8 @@ If you want to change the size, you need to modify the number and restart dphys-
 /etc/init.d/dphys-swapfile start
 ```
 
+we can use `iptraf` to check if the network is the bottleneck when we use wi-fi to build a cluster.
+
 ## References
 [1] Spark Programming Guide, http://spark.apache.org/docs/latest/programming-guide.html
 
