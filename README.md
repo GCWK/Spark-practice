@@ -385,6 +385,18 @@ Install Spark on each node
 
 Set password-free access between nodes, with `ssh-genkey` and `ssh-copy-id`.
 
+```
+ssh-genkey -t rsa
+
+ssh-copy-id -i .ssh/id_rsa.pub remote_id@remote_ip
+```
+
+We need to confirm if all the nodes, including all master and slaves, need to be able to access each other without password (including master to slave, slave to master, slave to slave)? or only the master should be able to access slaves without password.
+
+Bases on the experienment I did, the cluster can run when only the master can access slaves without password, but extremely slowly. Each stage will be "RUNNING" for very long time, but after it's "SUCCESS", actually its run-time was only a few seconds. Something may be wrong with the network.
+
+We should try if things will be better when all nodes can access each other.
+
 ### How to Increase SWAP Space Should the Memory Is Not Enough
 
 If we run Spark on some special device, like Raspberry, it's quite likely we may encounter error like device has not enough memory. We can figure this out by increasing SWAP spce [5].
