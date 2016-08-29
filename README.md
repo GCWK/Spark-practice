@@ -397,6 +397,8 @@ Bases on the experienment I did, the cluster can run when only the master can ac
 
 We should try if things will be better when all nodes can access each other.
 
+But in the documentation, we found "Note, the master machine accesses each of the worker machines via ssh. By default, ssh is run in parallel and requires password-less (using a private key) access to be setup. If you do not have a password-less setup, you can set the environment variable SPARK_SSH_FOREGROUND and serially provide a password for each worker.", which implies **master to slaves** password-less access is already enough.
+
 ### How to Increase SWAP Space Should the Memory Is Not Enough
 
 If we run Spark on some special device, like Raspberry, it's quite likely we may encounter error like device has not enough memory. We can figure this out by increasing SWAP spce [5].
